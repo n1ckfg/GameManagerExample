@@ -1,5 +1,3 @@
-float delta = 3;
-
 boolean keyW = false;
 boolean keyA = false;
 boolean keyS = false;
@@ -7,6 +5,8 @@ boolean keyD = false;
 
 void keyPressed() {
   checkKeyChar(key, true);
+  
+  if (key == ' ') gm.reset();
 }
 
 void keyReleased() {
@@ -29,10 +29,10 @@ boolean checkKeyChar(char k, boolean b) {
 }
 
 void updateControls() {
-  if (keyW) player.move(0,-delta);
-  if (keyS) player.move(0,delta);
-  if (keyA) player.move(-delta,0);
-  if (keyD) player.move(delta,0);
+  if (keyW) player.move(0, -player.speed);
+  if (keyS) player.move(0, player.speed);
+  if (keyA) player.move(-player.speed, 0);
+  if (keyD) player.move(player.speed, 0);
 }
 
 void keysOff() {
