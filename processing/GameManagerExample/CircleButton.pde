@@ -6,7 +6,7 @@ class CircleButton extends Button {
   
   void update() {
     //hovered = hitDetectCircle(mouseX, mouseY, 1, p.x, p.y, s.x);
-    if (hitDetectCircle(player.p.x, player.p.y, 1, p.x, p.y, s.x)) {
+    if (hitDetectCircle(player.p.x, player.p.y, s.x, p.x, p.y, s.x)) {
       clicked = true;
       hovered = true;
     }
