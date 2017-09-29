@@ -2,21 +2,15 @@
 
 class GameManager {
 
-  enum GameState { INTRO, PLAY, OUTRO };
+  enum GameState { PLAY, END };
   GameState gameState;
 
   GameManager() {
-      gameState = GameState.INTRO;
+    gameState = GameState.PLAY;
   }
-
+  
   void run() {
-    if (gameState == GameState.INTRO) {
-      //
-    } else if (gameState == GameState.PLAY) {
-      //
-    } else if (gameState == GameState.OUTRO) {
-      //
-    }
+     //buttons[0].p.x += 3;
   }
 
 }
