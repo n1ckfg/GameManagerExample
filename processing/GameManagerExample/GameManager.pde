@@ -19,6 +19,7 @@ class GameManager {
          }
          if (gotoEnd) gameState = GameState.END;
          break;
+         
        case END:
          for (int i=0; i<buttons.length; i++) {
            buttons[i].clickedColor = color(255, 127, 0);

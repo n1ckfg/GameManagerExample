@@ -10,15 +10,19 @@ public class GameManager : MonoBehaviour {
     public Fader fader;
     public Player player;
 
-	void Update () {
-		if (gameState == GameState.PLAY) {
-            bool goToEnd = true;
-            for (int i=0; i<bases.Length; i++) {
-                if (!bases[i].isVisited) goToEnd = false;
-            }
-            if (goToEnd) gameState = GameState.END;
-        } else if (gameState == GameState.END) {
-            fader.fadeOut();
+    void Update() {
+        switch (gameState) {
+            case GameState.PLAY:
+                bool goToEnd = true;
+                for (int i = 0; i < bases.Length; i++) {
+                    if (!bases[i].isVisited) goToEnd = false;
+                }
+                if (goToEnd) gameState = GameState.END;
+                break;
+
+            case GameState.END:
+                fader.fadeOut();
+                break;
         }
 	}
 
