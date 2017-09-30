@@ -15,6 +15,10 @@ function keyReleased() {
   checkKeyChar(key, false);
 }
 
+function mousePressed() {
+  player.setTarget(mouseX, mouseY);
+}
+
 function checkKeyChar(k, b) {
   switch (k.toLowerCase()) {
     case 'w':

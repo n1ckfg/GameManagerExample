@@ -13,6 +13,10 @@ void keyReleased() {
   checkKeyChar(key, false);
 }
 
+void mousePressed() {
+  player.setTarget(mouseX, mouseY);
+}
+
 boolean checkKeyChar(char k, boolean b) {
   switch (k) {
     case 'w':
