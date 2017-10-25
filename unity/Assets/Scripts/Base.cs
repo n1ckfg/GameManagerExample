@@ -17,6 +17,10 @@ public class Base : MonoBehaviour {
 	}
 
     private void OnTriggerEnter(Collider col) {
+        doIsVisited();
+    }
+
+    public void doIsVisited() {
         isVisited = true;
         light.color = visitedColor;
         light.enabled = true;
